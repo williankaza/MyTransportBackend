@@ -76,20 +76,68 @@ function cargaInicial(){
         pontos: [
             {
                 sequencial: 1,
-                latitude: 12.0000,
-                longitude: 13.0000,
+                latitude: -23.535487, 
+                longitude: -46.635460,
                 ativo: true
             },
             {
                 sequencial: 2,
-                latitude: 12.0012,
-                longitude: 13.9980,
+                latitude: -23.537867, 
+                longitude: -46.635977,
                 ativo: true
             },
             {
                 sequencial: 3,
-                latitude: 12.0023,
-                longitude: 13.9980,
+                latitude: -23.537828, 
+                longitude: -46.632984,
+                ativo: true
+            },
+            {
+                sequencial: 4,
+                latitude: -23.538364, 
+                longitude: -46.630629,
+                ativo: true
+            },
+            {
+                sequencial: 5,
+                latitude: -23.539766, 
+                longitude: -46.630720,
+                ativo: true
+            },
+            {
+                sequencial: 6,
+                latitude: -23.539274, 
+                longitude: -46.632903,
+                ativo: true
+            },
+            {
+                sequencial: 7,
+                latitude: -23.539097,
+                longitude: -46.634974,
+                ativo: true
+            },
+            {
+                sequencial: 8,
+                latitude: -23.538640, 
+                longitude: -46.636626,
+                ativo: true
+            },
+            {
+                sequencial: 9,
+                latitude: -23.537878, 
+                longitude: -46.636985,
+                ativo: true
+            },
+            {
+                sequencial: 10,
+                latitude: -23.535104, 
+                longitude: -46.636974,
+                ativo: true
+            },
+            {
+                sequencial: 11,
+                latitude: -23.535424, 
+                longitude: -46.635440,
                 ativo: true
             }
         ]
