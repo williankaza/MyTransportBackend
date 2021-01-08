@@ -32,20 +32,38 @@ function cargaInicial(){
         pontos: [
             {
                 sequencial: 1,
-                latitude: 10.0000,
-                longitude: 12.0000,
+                latitude: -23.583777,
+                longitude: -46.611073,
                 ativo: true
             },
             {
                 sequencial: 2,
-                latitude: 10.0012,
-                longitude: 11.9980,
+                latitude: -23.588442,
+                longitude: -46.610605,
                 ativo: true
             },
             {
                 sequencial: 3,
-                latitude: 10.0023,
-                longitude: 11.9980,
+                latitude: -23.588374, 
+                longitude: -46.608311,
+                ativo: true
+            },
+            {
+                sequencial: 4,
+                latitude: -23.584802,
+                longitude: -46.608687,
+                ativo: true
+            },
+            {
+                sequencial: 5,
+                latitude: -23.584674, 
+                longitude: -46.607617,
+                ativo: true
+            },
+            {
+                sequencial: 6,
+                latitude: -23.583502, 
+                longitude: -46.607773,
                 ativo: true
             }
         ]
