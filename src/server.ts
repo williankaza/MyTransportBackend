@@ -22,6 +22,7 @@ interface Pontos{
 interface Onibus{
     numero: string,
     ativo: boolean,
+    favorito: boolean,
     pontos: Array<Pontos>
 }
 
@@ -29,6 +30,7 @@ function cargaInicial(){
     let onibus01: Onibus = {
         numero: "201-2019",
         ativo: true,
+        favorito: true,
         pontos: [
             {
                 sequencial: 1,
@@ -73,6 +75,7 @@ function cargaInicial(){
     let onibus02: Onibus = {
         numero: "119-2020",
         ativo: true,
+        favorito: false,
         pontos: [
             {
                 sequencial: 1,
@@ -133,12 +136,6 @@ function cargaInicial(){
                 latitude: -23.535104, 
                 longitude: -46.636974,
                 ativo: true
-            },
-            {
-                sequencial: 11,
-                latitude: -23.535424, 
-                longitude: -46.635440,
-                ativo: true
             }
         ]
     }
@@ -147,6 +144,7 @@ function cargaInicial(){
     let onibus03: Onibus = {
         numero: "010-2119",
         ativo: true,
+        favorito: false,
         pontos: [
             {
                 sequencial: 1,
@@ -174,6 +172,7 @@ function cargaInicial(){
     let onibus04: Onibus = {
         numero: "140-3801",
         ativo: true,
+        favorito: true,
         pontos: [
             {
                 sequencial: 1,
@@ -251,7 +250,8 @@ app.post('/onibus', ( request, response )=>{
         let novoOnibus = {
             numero: body.numero,
             ativo: true,
-            pontos: lsPontos
+            pontos: lsPontos,
+            favorito: false
         }
 
         lsOnibus.push(novoOnibus)
@@ -261,6 +261,23 @@ app.post('/onibus', ( request, response )=>{
         return response.status(400).json({ error: 'Numero do onibus informado já foi cadastrado!' })
     }
 })
+
+app.post('/onibus/:numeroOnibus/favoritar', (request, response) => {
+    const { numeroOnibus } = request.params
+    const indexOnibus = lsOnibus.findIndex(x => x.numero == numeroOnibus)
+
+    if (indexOnibus > -1){
+        let onibus = lsOnibus[indexOnibus]
+        onibus.favorito = !onibus.favorito
+
+        lsOnibus[indexOnibus] = onibus;
+
+        return response.status(200).json( onibus );
+    } else {
+        return response.status(400).json( { error: "Onibus informado não encontrado!" } )
+    }
+})
+
 
 app.post('/onibus/:numero/ponto', ( request, response )=>{
     const { numeroOnibus } = request.params
